@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'tweet_lists/get'
+  get '/tweet_lists', to: 'tweet_lists#get'
+
 end
