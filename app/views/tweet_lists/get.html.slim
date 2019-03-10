@@ -1,0 +1,21 @@
+h1
+  | TweetLists#get
+- @tweet_contexts.map.with_index(1) do |tweet, index|
+  div
+    = index
+  div
+    = link_to tweet[:tweet_url], target: "_blank" do
+      = image_tag(tweet[:icon])
+    strong[nowrap]
+      = tweet[:name]
+    - if tweet[:img_url].present?
+      div
+        = simple_format(h(tweet[:text]))
+      div
+        = image_tag(tweet[:img_url], :size => "300x300")
+    - else
+      div
+        = simple_format(h(tweet[:text]))
+    div
+      = tweet[:tweet_date]
+    hr width="600" align="left"
