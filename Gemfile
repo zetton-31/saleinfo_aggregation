@@ -11,6 +11,8 @@ gem 'jbuilder',     '2.7.0'
 gem 'pry-byebug'
 gem 'twitter'
 gem 'dotenv-rails'
+gem 'slim-rails'
+gem 'html2slim'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
