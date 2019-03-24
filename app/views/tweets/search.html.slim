@@ -1,0 +1,9 @@
+= stylesheet_link_tag 'search_page', :media => "all"
+
+.card
+  h3 class='title'
+    | 検索結果
+
+  #tweets
+    = render partial: 'tweets_list'
+  == pagy_bootstrap_nav @pagy
