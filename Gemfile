@@ -14,10 +14,11 @@ gem 'jbuilder',     '2.7.0'
 gem 'pry-byebug'
 gem 'twitter'
 gem 'dotenv-rails'
-gem 'slim-rails'
+gem 'slim'
 gem 'html2slim'
 gem 'pagy'
 gem 'autoprefixer-rails', '9.1.0'
+gem 'mini_racer'
 gem 'redis-rails'
 
 group :development, :test do
