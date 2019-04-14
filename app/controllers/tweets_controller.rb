@@ -18,12 +18,14 @@ class TweetsController < ApplicationController
         search_words.concat("OR") if key_words.length > idx
       end
 
-      twitter_api_client = Api::TwitterApi::Client.new(search_words, @tweet.target_date)
-      @tweet_contexts = twitter_api_client.search_tweet
-      @tweet_contexts.compact!
+      api_params = {search_words: search_words, target_date: @tweet.target_date}
+      twitter_api_client = Api::TwitterApi::Client.new(api_params)
+      search_result = twitter_api_client.search_tweet
+      @tweet_contexts = @tweet.format_result(search_result)
       # TODO:Temporary comment out
       # cache_contents
     end
+
     @pagy, @tweet_contexts = pagy_array(@tweet_contexts, items: 50, params: search_params)
   end
 
