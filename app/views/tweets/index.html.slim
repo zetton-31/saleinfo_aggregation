@@ -7,13 +7,13 @@
     .container
       = form_with url: tweet_lists_path, model: @tweet, local: true, method: :post, class: 'form' do |f|
         .form-group
-          = f.label '場所：'
+          = f.label '場所（指定したくない場合は「*」を入力）：'
           = f.text_field :place, class: 'form-control', placeholder: '新宿'
         .form-group
           = f.label 'キーワード（カンマ区切り）：'
           = f.text_field :key_words, class: 'form-control place', placeholder: 'セール,SALE,OFF'
         .form-group
-          = f.label '日付（期間指定不可）：'
+          = f.label '日付（期間指定不可／最大１週間前まで指定可能）：'
           = f.text_field :target_date, class: 'form-control date', placeholder: '2019-03-01'
         .form-group
           = f.submit '検索', class: 'btn btn-primary'
