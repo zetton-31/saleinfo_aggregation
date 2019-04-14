@@ -4,6 +4,7 @@ gem 'rails',        '5.1.6'
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
 gem 'bootstrap', '~> 4.3.1'
+gem 'bulma-rails', "~> 0.7.4"
 gem 'sprockets-rails'
 gem 'uglifier',     '3.2.0'
 gem 'coffee-rails', '4.2.2'
