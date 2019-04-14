@@ -1,0 +1,19 @@
+= stylesheet_link_tag 'index_bulma', :media => "all"
+
+.container
+  .notification
+    h3 class='title'
+      | Tweet Search
+    .container.is-fluid
+      = form_with url: tweet_lists_path, model: @tweet, local: true, method: :post, class: 'form' do |f|
+        .form-group
+          = f.label '場所：', class: 'label'
+          = f.text_field :place, class: 'input is-rounded', placeholder: '新宿'
+        .form-group
+          = f.label 'キーワード（カンマ区切り）：', class: 'label'
+          = f.text_field :key_words, class: 'input is-rounded', placeholder: 'セール,SALE,OFF'
+        .form-group
+          = f.label '日付（期間指定不可）：', class: 'label'
+          = f.text_field :target_date, class: 'input is-rounded', placeholder: '2019-03-01'
+        .form-group
+          = f.submit '検索', class: 'button is-primary'
