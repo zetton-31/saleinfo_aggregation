@@ -1,24 +1,13 @@
-# README
+## About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a web application to collect bargain information.
 
-Things you may want to cover:
+## Environments
 
-* Ruby version
+* Ruby version : ruby 2.5.7
 
-* System dependencies
+* Rails version : Rails 5.0.6
 
-* Configuration
+* Database : MySQL
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Web Server : Nginx + unicorn
