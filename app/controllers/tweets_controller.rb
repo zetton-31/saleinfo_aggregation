@@ -1,6 +1,14 @@
 class TweetsController < ApplicationController
   include Pagy::Backend
 
+  def index_bulma_slim
+    render :index_bulma
+  end
+
+  def index_bulma_html
+    render :index_bulma_h
+  end
+
   def search
     @tweet = Tweet.new(search_params)
     unless @tweet.valid?
